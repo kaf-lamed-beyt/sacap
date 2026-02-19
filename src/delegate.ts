@@ -29,6 +29,8 @@ export async function createDelegation({
 
   // loads the storacha CLI agent from its local store which can be found at
   // ~/Library/Preferences/w3access/storacha-cli.json on macOS
+  // ~/.config/w3access/storacha-cli.json on linux
+  // %APPDATA%/w3access/storacha-cli.json on windows
   const store = new StoreConf({ profile: "storacha-cli" });
   const client = await create({ store });
 

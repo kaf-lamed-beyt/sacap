@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { createDelegation } from "./delegate.js";
+import { Ability } from "@storacha/client/types";
 
 const args = process.argv.slice(2);
 
@@ -20,7 +21,7 @@ options:
   --help, -h        show this help message
 
 examples:
-  sacap plan/get did:key:z6Mk... fil.keep.dev@gmail.com
+  sacap plan/get did:key:z6Mk... alice@example.com
   sacap "plan/*" did:key:z6Mk... alice@example.com --expiry 30
 `);
   process.exit(0);
@@ -53,7 +54,7 @@ if (isNaN(expiryDays) || expiryDays <= 0) {
 
 try {
   const proof = await createDelegation({
-    capability,
+    capability: capability as Ability,
     targetDID,
     email,
     expiryDays,

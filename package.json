@@ -1,0 +1,41 @@
+{
+  "name": "sacap",
+  "version": "0.1.0",
+  "description": "Delegate account-level Storacha UCAN capabilities (like plan/get) to server agents",
+  "type": "module",
+  "main": "dist/delegate.js",
+  "types": "dist/delegate.d.ts",
+  "bin": {
+    "sacap": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+  },
+  "license": "MIT",
+  "author": "Caleb <belac335@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaf-lamed-beyt/sacap"
+  },
+  "keywords": [
+    "storacha",
+    "ucan",
+    "delegation",
+    "plan",
+    "w3up",
+    "ipfs",
+    "sacap"
+  ],
+  "dependencies": {
+    "@storacha/client": "^1.8.0",
+    "@ucanto/core": "^10.0.0",
+    "multiformats": "^13.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

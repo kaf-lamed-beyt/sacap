@@ -1,6 +1,6 @@
 # sacap
 
-**S**toracha **A**ccount **Cap**abilities — delegate account-level [Storacha](https://storacha.network) capabilities to server agents.
+**S**toracha **A**ccount **Cap**abilities — delegate account-level [Storacha](https://storacha.network) capabilities to server agents. You can read more on the "WHY" [here](https://www.meje.dev/blog/ucans-in-the-wild)
 
 The Storacha CLI's `delegation create` command only supports space-scoped delegations (`did:key:...`). Some capabilities like `plan/get` are scoped to your account (`did:mailto:...`) and can't be delegated through the CLI. This tool handles that.
 
